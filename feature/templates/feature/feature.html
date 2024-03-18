@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+    {% block  page_title%}
+        {{month_name| title}}
+    {% endblock  %}
+
+    {% block content %}
+    {% include "feature/includes/header.html" %}
+        <div class="card">
+            <h3> This month challenge is great </h3>
+            <h3> Go for a walk atleast twice in a week </h3>
+           {% if text is not None %}
+                <h1><b> {{text}} </b></h1>
+            {% else %}
+                <p> There isn't any challenge for This Month</p>
+            {% endif %} 
+        </di>
+        {% endblock  %}
